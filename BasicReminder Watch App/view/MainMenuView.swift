@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import UserNotifications
 
 struct MainMenuView: View {
     @State private var timeToClockIn: Int = 0
@@ -25,6 +26,9 @@ struct MainMenuView: View {
                 .resizable()
                 .frame(width: 80, height: 80)
                 .foregroundStyle(.green)
+                .onTapGesture {
+                    userShift.scheduleImmedieateNotification()
+                }
             VStack {
                 Text("See you")
                 Text("Tommorow!")
@@ -38,6 +42,9 @@ struct MainMenuView: View {
                 .resizable()
                 .frame(width: 80, height: 80)
                 .foregroundStyle(.red)
+                .onTapGesture {
+                    userShift.scheduleImmedieateNotification()
+                }
             VStack {
                 Text("Clock Out in")
                 Text("\(clockOutCountDown)")
@@ -61,7 +68,9 @@ struct MainMenuView: View {
                 .resizable()
                 .frame(width: 120, height: 80)
                 .foregroundStyle(.orange)
-
+                .onTapGesture {
+                    userShift.scheduleImmedieateNotification()
+                }
             VStack {
                 Text("Clock In end in")
                 Text("\(clockInCountDown)")
@@ -96,6 +105,7 @@ struct MainMenuView: View {
             .padding()
         }
         .task {
+            userShift.requestAuthorizationForNotification()
             timeToClockIn = userShift.getClockInRemainingTime()
             timeToClockOut = userShift.getClockOutRemainingTime()
             userShift.scheduleClockInNotifications()

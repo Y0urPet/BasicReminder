@@ -137,5 +137,34 @@ final class UserShift {
             }
         }
     }
+    
+    func scheduleImmedieateNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "CLOCK IN!!"
+        content.sound = .defaultCritical
+        content.categoryIdentifier = "myCategory"
+        let category = UNNotificationCategory(identifier: "myCategory", actions: [], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+        let request = UNNotificationRequest(identifier: "clockOut", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("Error scheduling notification: \(error)")
+            } else {
+                print("Scheduled immedieate notification!")
+            }
+        }
+    }
+    
+    func requestAuthorizationForNotification() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (success, error) in
+            if success{
+                print("All set")
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
 
