@@ -574,7 +574,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N2K3R4X37B;
-				INFOPLIST_KEY_CFBundleDisplayName = BasicReminder;
+				INFOPLIST_KEY_CFBundleDisplayName = ReminderCico;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourpet.BasicReminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -590,7 +590,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N2K3R4X37B;
-				INFOPLIST_KEY_CFBundleDisplayName = BasicReminder;
+				INFOPLIST_KEY_CFBundleDisplayName = ReminderCico;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourpet.BasicReminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
