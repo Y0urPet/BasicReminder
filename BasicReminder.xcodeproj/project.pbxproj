@@ -15,6 +15,10 @@
 		2BB1AADA2C0361C500BF31B8 /* BasicReminder_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1AAD92C0361C500BF31B8 /* BasicReminder_Watch_AppTests.swift */; };
 		2BB1AAE42C0361C500BF31B8 /* BasicReminder_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1AAE32C0361C500BF31B8 /* BasicReminder_Watch_AppUITests.swift */; };
 		2BB1AAE62C0361C500BF31B8 /* BasicReminder_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1AAE52C0361C500BF31B8 /* BasicReminder_Watch_AppUITestsLaunchTests.swift */; };
+		2BB1AAF72C0361E800BF31B8 /* UserShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1AAF62C0361E800BF31B8 /* UserShift.swift */; };
+		2BB1AAF92C03623800BF31B8 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1AAF82C03623800BF31B8 /* OnBoardingView.swift */; };
+		2BB1AAFB2C03625F00BF31B8 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1AAFA2C03625F00BF31B8 /* MainMenuView.swift */; };
+		2BB1AAFD2C03629600BF31B8 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1AAFC2C03629600BF31B8 /* Time.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		2BB1AADF2C0361C500BF31B8 /* BasicReminder Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BasicReminder Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB1AAE32C0361C500BF31B8 /* BasicReminder_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicReminder_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		2BB1AAE52C0361C500BF31B8 /* BasicReminder_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicReminder_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2BB1AAF62C0361E800BF31B8 /* UserShift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserShift.swift; sourceTree = "<group>"; };
+		2BB1AAF82C03623800BF31B8 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		2BB1AAFA2C03625F00BF31B8 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		2BB1AAFC2C03629600BF31B8 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				2BB1AAC82C0361C400BF31B8 /* BasicReminderApp.swift */,
-				2BB1AACA2C0361C400BF31B8 /* ContentView.swift */,
+				2BB1AB002C0362D200BF31B8 /* view */,
+				2BB1AAFF2C0362CB00BF31B8 /* model */,
+				2BB1AAFE2C0362C400BF31B8 /* helper */,
 				2BB1AACC2C0361C500BF31B8 /* Assets.xcassets */,
 				2BB1AACE2C0361C500BF31B8 /* Preview Content */,
 			);
@@ -149,6 +159,32 @@
 				2BB1AAE52C0361C500BF31B8 /* BasicReminder_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "BasicReminder Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		2BB1AAFE2C0362C400BF31B8 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				2BB1AAFC2C03629600BF31B8 /* Time.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		2BB1AAFF2C0362CB00BF31B8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2BB1AAF62C0361E800BF31B8 /* UserShift.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		2BB1AB002C0362D200BF31B8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2BB1AACA2C0361C400BF31B8 /* ContentView.swift */,
+				2BB1AAF82C03623800BF31B8 /* OnBoardingView.swift */,
+				2BB1AAFA2C03625F00BF31B8 /* MainMenuView.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BB1AAFD2C03629600BF31B8 /* Time.swift in Sources */,
+				2BB1AAFB2C03625F00BF31B8 /* MainMenuView.swift in Sources */,
 				2BB1AACB2C0361C400BF31B8 /* ContentView.swift in Sources */,
+				2BB1AAF92C03623800BF31B8 /* OnBoardingView.swift in Sources */,
+				2BB1AAF72C0361E800BF31B8 /* UserShift.swift in Sources */,
 				2BB1AAC92C0361C400BF31B8 /* BasicReminderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
