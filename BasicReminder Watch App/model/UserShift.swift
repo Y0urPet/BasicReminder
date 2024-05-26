@@ -84,7 +84,7 @@ final class UserShift {
                     if let error = error {
                         print("Error scheduling notification: \(error)")
                     } else {
-                        print("Scheduled notification for minute \(minute) past 9 AM")
+                        print("Scheduled notification for minute \(minute) past 13 AM")
                     }
                 }
             } else {
@@ -120,7 +120,7 @@ final class UserShift {
                 if let error = error {
                     print("Error scheduling notification: \(error)")
                 } else {
-                    print("Scheduled notification for minute past 13 PM")
+                    print("Scheduled notification for minute past 18 PM")
                 }
             }
         } else {
