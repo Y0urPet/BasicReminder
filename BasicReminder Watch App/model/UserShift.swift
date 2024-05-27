@@ -20,7 +20,7 @@ final class UserShift {
     func getClockInRemainingTime() -> Int {
         var timeToClockIn = 0
         if isAfternoon {
-            timeToClockIn = 47700 - ((Calendar.current.component(.hour, from: Date.now)) * 3600 + Calendar.current.component(.minute, from: Date.now) * 60 + Calendar.current.component(.second, from: Date.now))
+            timeToClockIn = 51300 - ((Calendar.current.component(.hour, from: Date.now)) * 3600 + Calendar.current.component(.minute, from: Date.now) * 60 + Calendar.current.component(.second, from: Date.now))
         } else {
             timeToClockIn = 33300 - ((Calendar.current.component(.hour, from: Date.now)) * 3600 + Calendar.current.component(.minute, from: Date.now) * 60 + Calendar.current.component(.second, from: Date.now))
         }
@@ -40,7 +40,7 @@ final class UserShift {
     func getClockInTime() -> Date {
         var clockInTimeComponent = DateComponents()
         if isAfternoon {
-            clockInTimeComponent.hour = 13
+            clockInTimeComponent.hour = 14
             clockInTimeComponent.minute = 15
         } else {
             clockInTimeComponent.hour = 09
@@ -75,7 +75,7 @@ final class UserShift {
         let category = UNNotificationCategory(identifier: "myCategory", actions: [], intentIdentifiers: [], options: [])
         for minute in 0..<16 {
             if isAfternoon {
-                let components = DateComponents(hour: 9, minute: minute)
+                let components = DateComponents(hour: 14, minute: minute)
                 UNUserNotificationCenter.current().setNotificationCategories([category])
                 let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
                 let request = UNNotificationRequest(identifier: "clockIn_\(minute)", content: content, trigger: trigger)
@@ -84,11 +84,11 @@ final class UserShift {
                     if let error = error {
                         print("Error scheduling notification: \(error)")
                     } else {
-                        print("Scheduled notification for minute \(minute) past 13 AM")
+                        print("Scheduled notification for minute \(minute) past 14 AM")
                     }
                 }
             } else {
-                let components = DateComponents(hour: 13, minute: minute)
+                let components = DateComponents(hour: 9, minute: minute)
                 UNUserNotificationCenter.current().setNotificationCategories([category])
                 let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
                 let request = UNNotificationRequest(identifier: "clockIn_\(minute)", content: content, trigger: trigger)
